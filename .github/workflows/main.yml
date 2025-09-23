@@ -74,6 +74,8 @@ jobs:
                 namespace: 'tech-homolog'
                 manifests: |
                   k8s/deployment.yaml
+                images: |
+                  luiz7030/encontros-tech:v${{ github.run_number }}
 
     CD-Prod:
         runs-on: ubuntu-latest
@@ -105,3 +107,5 @@ jobs:
                 namespace: 'tech-prod'
                 manifests: |
                   k8s/deployment.yaml
+                images: |
+                  luiz7030/encontros-tech:v${{ github.run_number }}
